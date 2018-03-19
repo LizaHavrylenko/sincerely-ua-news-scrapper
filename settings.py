@@ -109,17 +109,83 @@ settings = {
       + "tags_template": "div.news_by_theme",
    },
     "www.gordonua.com"{
-       + "articles_list_by_day_template" : "http://gordonua.com/html/newsitemap/%Y-%m/{date}.html",
+        "articles_list_by_day_template" : "http://gordonua.com/html/newsitemap/%Y-%m/{date}.html",
         "articles_list_content_blocks_template" : "body",
        ? "article_link_template" :"body.ul.remove() a", ?
         "date_template" : "%Y-%m-%d",
         # "pages_template" : "div.col-12",
-       + "article_title_template" : "h1.a_head.flipboard-title",
-       + "article_publication_datetime" :"div.a_footer time.flipboard-date",
-       + "article_text_template" :"div.block.article",
+        "article_title_template" : "h1.a_head.flipboard-title",
+        "article_publication_datetime" :"div.a_footer time.flipboard-date",
+        "article_text_template" :"div.block.article",
         #"tags_template2" : "", 
-       +"tags_template": "div.tags.flipboard-endArticle"
+       "tags_template": "div.tags.flipboard-endArticle"
     },
+    "www.unian.ua"{
+        "articles_list_by_day_template" : " https://www.unian.ua/news/archive/{date}",
+        "articles_list_content_blocks_template" : "div.publications-archive",
+        "article_link_template" : "a.publication-title",
+        "date_template" : "%Y%m%d", 
+        #"pages_template" : "div.pagination ul.pages li:last",
+        "article_title_template" : "h1",
+        "article_publication_datetime" : "div.item.time.no-padding",
+        "article_text_template" : "div.article-text",
+        "tags_template2" : "div.mp-level.main-menu",
+        #"tags_template": "meta[name=keywords]",
+        #"news_keywords": "meta[name=news_keywords]"
+    },
+    "www.comments.ua"{
+        "articles_list_by_day_template" : "https://comments.ua/archive/{date}/",
+        "articles_list_content_blocks_template" : "div.archive_feed_box",
+        "article_link_template" : "a.link_search_result_title",
+        "date_template" : "%Y-%m-%d",
+        #"pages_template" : "div.pagination ul.pages li:last",
+        "article_title_template" : "h1.text_news_header_text",
+        "article_publication_datetime" : "p.text_news_header_date",
+        "article_text_template" : "div.news_content_box",
+       "tags_template2" : "p.text_news_source",
+       # "tags_template": "meta[name=keywords]",
+       # "news_keywords": "meta[name=news_keywords]"
+    },
+    "www.112.ua"{
+        "articles_list_by_day_template" :  "https://112.ua/archive?date_from={date}-10&date_to={date}",
+        "articles_list_content_blocks_template" : "ul.news-list",
+        "article_link_template" : "li p a",
+        "date_template" : "%Y-%m-%d",
+        "pages_template" : "ul.pagination",
+        "article_title_template" : "h1.itemprop",
+        "article_publication_datetime" : "div.meta-info div.time",
+        "article_text_template" : "div.article-text",
+        "tags_template2" : "div.article-tags",
+        #"tags_template": "meta[name=keywords]",
+        #"news_keywords": "meta[name=news_keywords]" 
+    },
+    "www.gazeta.ua"{
+        "articles_list_by_day_template" : "https://gazeta.ua/news/{date}#100/",
+        "articles_list_content_blocks_template" : "div.news-wrapper",
+        "article_link_template" : "a.news-title.block.black.fs16.mb5",
+        "date_template" : "%Y-%m-%d",
+       # "pages_template" : "div.pagination ul.pages li:last",
+        "article_title_template" : "article h1",
+        "article_publication_datetime" : "div.pull-right.news-date",
+        "article_text_template" : "section.article-content.clearfix",
+       #"tags_template2" : "div.tag a",
+       #"tags_template": "meta[name=keywords]",
+       #"news_keywords": "meta[name=news_keywords]"
+    },
+    "wwww.fakty.ua"{
+        "articles_list_by_day_template" : "http://fakty.ua/archive/index?d={date}&ArticlesItem_page={page_number}",
+        "articles_list_content_blocks_template" : "div.items",
+        "article_link_template" : "a.tit",
+        "date_template" : "%Y%m%d",
+        "pages_template" : "div.pager ul li:last",
+        "article_title_template" : "div.zag3 h1",
+        "article_publication_datetime" : "span.g-gate",
+        "article_text_template" : "div#article_content3",
+        #"tags_template2" : "div.tag a",
+        #"tags_template": "meta[name=keywords]",
+        #"news_keywords": "meta[name=news_keywords]"
+    },
+    
 }
 
 
