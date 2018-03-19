@@ -96,19 +96,21 @@ settings = {
        "tags_template2" : "div.tags", #loop through a
        "tags_template": "",
    }
-   "www.censor.net.ua":{
-   + "articles_list_by_day_template" : "https://censor.net.ua/news/all/page/{page_number}/archive/{date}/category/0/sortby/date",
-    +   "articles_list_content_blocks_template" : "div.curpane",
-     +  "article_link_template" : "h3 a",
-      + "date_template" : "%Y-%m-%d",
+   "www.censor.net.ua":
+    {
+       "articles_list_by_day_template" : "https://censor.net.ua/news/all/page/{page_number}/archive/{date}/category/0/sortby/date",
+       "articles_list_content_blocks_template" : "div.curpane",
+       "article_link_template" : "h3 a",
+       "date_template" : "%Y-%m-%d",
       # "pages_template" : "div.col-12",
-      + "article_title_template" : "h1.entry-title",
-      + "article_publication_datetime" : "time.published.dateline",
-      + "article_text_template" : "div.text",
-       +"tags_template2" : "div.tags", 
-      + "tags_template": "div.news_by_theme",
+       "article_title_template" : "h1.entry-title",
+       "article_publication_datetime" : "time.published.dateline",
+       "article_text_template" : "div.text",
+       "tags_template2" : "div.tags", 
+       "tags_template": "div.news_by_theme",
    },
-    "www.gordonua.com"{
+    "www.gordonua.com":
+    {
         "articles_list_by_day_template" : "http://gordonua.com/html/newsitemap/%Y-%m/{date}.html",
         "articles_list_content_blocks_template" : "body",
        ? "article_link_template" :"body.ul.remove() a", ?
@@ -120,7 +122,8 @@ settings = {
         #"tags_template2" : "", 
        "tags_template": "div.tags.flipboard-endArticle"
     },
-    "www.unian.ua"{
+    "www.unian.ua":
+    {
         "articles_list_by_day_template" : " https://www.unian.ua/news/archive/{date}",
         "articles_list_content_blocks_template" : "div.publications-archive",
         "article_link_template" : "a.publication-title",
@@ -133,7 +136,8 @@ settings = {
         #"tags_template": "meta[name=keywords]",
         #"news_keywords": "meta[name=news_keywords]"
     },
-    "www.comments.ua"{
+    "www.comments.ua":
+    {
         "articles_list_by_day_template" : "https://comments.ua/archive/{date}/",
         "articles_list_content_blocks_template" : "div.archive_feed_box",
         "article_link_template" : "a.link_search_result_title",
@@ -146,7 +150,8 @@ settings = {
        # "tags_template": "meta[name=keywords]",
        # "news_keywords": "meta[name=news_keywords]"
     },
-    "www.112.ua"{
+    "www.112.ua":
+    {
         "articles_list_by_day_template" :  "https://112.ua/archive?date_from={date}-10&date_to={date}",
         "articles_list_content_blocks_template" : "ul.news-list",
         "article_link_template" : "li p a",
@@ -159,7 +164,8 @@ settings = {
         #"tags_template": "meta[name=keywords]",
         #"news_keywords": "meta[name=news_keywords]" 
     },
-    "www.gazeta.ua"{
+    "www.gazeta.ua":
+    {
         "articles_list_by_day_template" : "https://gazeta.ua/news/{date}#100/",
         "articles_list_content_blocks_template" : "div.news-wrapper",
         "article_link_template" : "a.news-title.block.black.fs16.mb5",
@@ -172,7 +178,8 @@ settings = {
        #"tags_template": "meta[name=keywords]",
        #"news_keywords": "meta[name=news_keywords]"
     },
-    "wwww.fakty.ua"{
+    "wwww.fakty.ua":
+    {
         "articles_list_by_day_template" : "http://fakty.ua/archive/index?d={date}&ArticlesItem_page={page_number}",
         "articles_list_content_blocks_template" : "div.items",
         "article_link_template" : "a.tit",
@@ -185,7 +192,8 @@ settings = {
         #"tags_template": "meta[name=keywords]",
         #"news_keywords": "meta[name=news_keywords]"
     },
-    "www.kp.ua"{
+    "www.kp.ua":
+    {
         "articles_list_by_day_template" : "https://kp.ua/archive/{date}/",
         "articles_list_content_blocks_template" : "ul.news-online.news-per-day",
         "article_link_template" : "ul.news-online.news-per-day li a",
