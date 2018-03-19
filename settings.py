@@ -77,7 +77,7 @@ settings = {
        "article_link_template" : "a.href",
        "date_template" : "%Y_%B_%d",
        # "pages_template" : "div.col-12",
-       "article_title_template" : "h1.itemprop",
+       "article_title_template" : "header h1",
        "article_publication_datetime" : "div.article div span:date",
        "article_text_template" : "div.block-post-text",
        "tags_template2" : "div.keywords_block", #loop through a
