@@ -96,7 +96,18 @@ settings = {
        "tags_template2" : "div.tags", #loop through a
        "tags_template": "",
    }
-
+   "censor.net.ua":{
+   + "articles_list_by_day_template" : "https://censor.net.ua/news/all/page/{page_number}/archive/{date}/category/0/sortby/date",
+    +   "articles_list_content_blocks_template" : "div.curpane",
+     +  "article_link_template" : "h3 a",
+      + "date_template" : "%Y_%m_%d",
+      # "pages_template" : "div.col-12",
+      + "article_title_template" : "h1.entry-title",
+      + "article_publication_datetime" : "time.published.dateline",
+      + "article_text_template" : "div.text",
+       +"tags_template2" : "div.tags", 
+      + "tags_template": "div.news_by_theme",
+   }
 }
 
 
