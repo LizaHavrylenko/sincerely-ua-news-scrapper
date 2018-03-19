@@ -77,7 +77,7 @@ settings = {
        "article_link_template" : "a.href",
        "date_template" : "%Y_%B_%d",
        # "pages_template" : "div.col-12",
-       "article_title_template" : "h1.itemprop",
+       "article_title_template" : "header h1",
        "article_publication_datetime" : "div.article div span:date",
        "article_text_template" : "div.block-post-text",
        "tags_template2" : "div.keywords_block", #loop through a
@@ -206,6 +206,32 @@ settings = {
         #"tags_template": "meta[name=keywords]",
         #"news_keywords": "meta[name=news_keywords]"
     },
+    "zn.ua":
+   {
+       "articles_list_by_day_template" : "https://zn.ua/all-news/?page={page_number}&date={date}",
+       "articles_list_content_blocks_template" : "div.left_news_list.wide ul.news_list", 
+       "article_link_template" : "div.left_news_list.wide a.news_link",
+       "date_template" : "%Y-%m-%d",
+       "pages_template" : "div.navigate a.page",
+       "article_title_template" : "h1.title",
+       "article_publication_datetime" : "div.central_article .date",
+       "article_text_template" : "div.article_body .text p",
+       #"tags_template2" : "div.keywords_block", #loop through a
+       "tags_template": ".hashtags a",
+   },
+    "podrobnosti.ua":
+   {
+       "articles_list_by_day_template" : "https://podrobnosti.ua/all/archive/{date}/all/page{page_number}/",
+       "articles_list_content_blocks_template" : "div.news-list.news-table",
+       "article_link_template" : "div.news-list.news-table a",
+       "date_template" : "%Y/%m/%d",
+       "pages_template" : "ul.pagination",
+       "article_title_template" : "div.print_container h1",
+       "article_publication_datetime" : "div.print_container span.date",
+       "article_text_template" : "div#article_content p",
+       #"tags_template2" : "div.keywords_block", #loop through a
+       "tags_template": ".tags a",
+   }
 }
 
 
