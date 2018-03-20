@@ -145,8 +145,8 @@ settings = {
         #"pages_template" : "div.pagination ul.pages li:last",
         "article_title_template" : "h1.text_news_header_text",
         "article_publication_datetime" : "p.text_news_header_date",
-        "article_text_template" : "div.news_content_box",
-       "tags_template2" : "p.text_news_source",
+        "article_text_template" : "div#hypercontext",
+        "tags_template2" : "p.text_news_source",
        # "tags_template": "meta[name=keywords]",
        # "news_keywords": "meta[name=news_keywords]"
     },
@@ -159,7 +159,7 @@ settings = {
         "pages_template" : "ul.pagination [class!="next"] li:last", 
         "article_title_template" : "div.b-center-item-head-info h1",
         "article_publication_datetime" : "div.meta-info div.time",
-        "article_text_template" : "div.article-text",
+        "article_text_template" : "h3.article-lead, div.article-text",
         "tags_template2" : "div.article-tags",
         #"tags_template": "meta[name=keywords]",
         #"news_keywords": "meta[name=news_keywords]" 
