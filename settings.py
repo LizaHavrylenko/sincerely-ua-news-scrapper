@@ -177,7 +177,7 @@ settings = {
         "articles_list_content_blocks_template" : "div.items",
         "article_link_template" : "a.tit",
         "date_template" : "%Y%m%d",
-        "pages_template" : "div.pager ul li:last",
+        "pages_template" : "div.pager li.last a",
         "article_title_template" : "div.zag3 h1",
         "article_publication_datetime" : "span.g-gate",
         "article_text_template" : "div#article_content3",
