@@ -113,7 +113,7 @@ settings = {
     {
         "articles_list_by_day_template" : "http://gordonua.com/html/newsitemap/%Y-%m/{date}.html",
         "articles_list_content_blocks_template" : "body",
-       ? "article_link_template" :"body.ul.remove() a", ?
+        "article_link_template" :"body>a", 
         "date_template" : "%Y-%m-%d",
         # "pages_template" : "div.col-12",
         "article_title_template" : "h1.a_head.flipboard-title",
