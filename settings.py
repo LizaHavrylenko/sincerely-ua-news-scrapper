@@ -198,6 +198,19 @@ settings = {
         #"tags_template": "meta[name=keywords]",
         #"news_keywords": "meta[name=news_keywords]"
     },
+     "www.unn.com.ua":
+   {
+       "articles_list_by_day_template" : "http://www.unn.com.ua/uk/news/{date}/page-{page_number}",
+       "articles_list_content_blocks_template" : "div#news_public_holder.h-news-feed", 
+       "article_link_template" : "div#news_public_holder.h-news-feed a",
+       "date_template" : "%Y/%m/%d",
+       "pages_template" : "div.b-page-selector [class!='page_nav next_page']:last",
+       "article_title_template" : "h1.title",
+       "article_publication_datetime" : "[itemprop='datePublished']",
+       "article_text_template" : "div.b-news-text.b-static-text",
+       "tags_template2" : "div.b-news-tags a", #loop through a
+       #"tags_template": ".hashtags a",
+   },
     "zn.ua":
    {
        "articles_list_by_day_template" : "https://zn.ua/all-news/?page={page_number}&date={date}",
