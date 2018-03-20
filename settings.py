@@ -156,7 +156,7 @@ settings = {
         "articles_list_content_blocks_template" : "ul.news-list",
         "article_link_template" : "li p a",
         "date_template" : "%Y-%m-%d",
-        "pages_template" : "ul.pagination", # goes to pages template, impossible to access last page directly
+        "pages_template" : "ul.pagination [class!="next"] li:last", 
         "article_title_template" : "div.b-center-item-head-info h1",
         "article_publication_datetime" : "div.meta-info div.time",
         "article_text_template" : "div.article-text",
