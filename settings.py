@@ -212,7 +212,7 @@ settings = {
        "articles_list_content_blocks_template" : "div.left_news_list.wide ul.news_list", 
        "article_link_template" : "div.left_news_list.wide a.news_link",
        "date_template" : "%Y-%m-%d",
-       "pages_template" : "div.navigate a.page",
+       "pages_template" : "div.navigate a.page:last",
        "article_title_template" : "h1.title",
        "article_publication_datetime" : "div.central_article .date",
        "article_text_template" : "div.article_body .text p",
@@ -221,11 +221,11 @@ settings = {
    },
     "podrobnosti.ua":
    {
-       "articles_list_by_day_template" : "https://podrobnosti.ua/all/archive/{date}/all/page{page_number}/",
+       "articles_list_by_day_template" : "https://podrobnosti.ua/all/archive/{date}/all/page{page_number}/", #this page does not actually load until any date is selected on the calendar
        "articles_list_content_blocks_template" : "div.news-list.news-table",
        "article_link_template" : "div.news-list.news-table a",
        "date_template" : "%Y/%m/%d",
-       "pages_template" : "ul.pagination",
+       "pages_template" : "ul.pagination a:last",
        "article_title_template" : "div.print_container h1",
        "article_publication_datetime" : "div.print_container span.date",
        "article_text_template" : "div#article_content p",
