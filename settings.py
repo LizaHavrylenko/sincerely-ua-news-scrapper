@@ -160,16 +160,16 @@ settings = {
         #"news_keywords": "meta[name=news_keywords]" 
     },
     "www.gazeta.ua"{
-        "articles_list_by_day_template" : "https://gazeta.ua/news/{date}#100/",
+        "articles_list_by_day_template" : "https://gazeta.ua/news/{date}/", # concatenating #100 to the url does not change news displayed and sometimes leads to no news displayed at all or even 404
         "articles_list_content_blocks_template" : "div.news-wrapper",
         "article_link_template" : "a.news-title.block.black.fs16.mb5",
         "date_template" : "%Y-%m-%d",
-       # "pages_template" : "div.pagination ul.pages li:last",
+        "pages_template" : "a#stream-next",                                 # button "Гортати далі", seems to load next 20 news on press.
         "article_title_template" : "article h1",
         "article_publication_datetime" : "div.pull-right.news-date",
-        "article_text_template" : "section.article-content.clearfix",
-       #"tags_template2" : "div.tag a",
-       #"tags_template": "meta[name=keywords]",
+        "article_text_template" : "section.article-content.clearfix article",
+       "tags_template2" : "article a.w-tag-title,a.w-title",
+       "tags_template": "article a.w-title",
        #"news_keywords": "meta[name=news_keywords]"
     },
     "wwww.fakty.ua"{
