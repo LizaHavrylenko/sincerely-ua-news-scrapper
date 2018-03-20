@@ -188,7 +188,7 @@ settings = {
     "www.kp.ua"{
         "articles_list_by_day_template" : "https://kp.ua/archive/{date}/",
         "articles_list_content_blocks_template" : "ul.news-online.news-per-day",
-        "article_link_template" : "ul.news-online.news-per-day li a",
+        "article_link_template" : "ul.news-online.news-per-day  a",
         "date_template" : "%Y/%B/%d",
        #"pages_template" : "div.pagination ul.pages li:last",
         "article_title_template" : "div.content-img__main h1",
