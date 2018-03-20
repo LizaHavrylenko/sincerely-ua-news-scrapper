@@ -129,10 +129,10 @@ settings = {
         "article_link_template" : "a.publication-title",
         "date_template" : "%Y%m%d", 
         #"pages_template" : "div.pagination ul.pages li:last",
-        "article_title_template" : "h1",
+        "article_title_template" : "div.article-text h1",
         "article_publication_datetime" : "div.item.time.no-padding",
-        "article_text_template" : "div.article-text",
-        "tags_template2" : "div.mp-level.main-menu",
+        "article_text_template" : " h2, div.clearfix",
+        "tags_template2" : "div.mp-level.main-menu", # access to all the topics on the page, no tags
         #"tags_template": "meta[name=keywords]",
         #"news_keywords": "meta[name=news_keywords]"
     },
