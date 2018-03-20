@@ -77,7 +77,7 @@ settings = {
        "article_link_template" : "a.href",
        "date_template" : "%Y_%B_%d",
        # "pages_template" : "div.col-12",
-       "article_title_template" : "header h1",
+       "article_title_template" : "header h1", # article title template was fixed
        "article_publication_datetime" : "div.article div span:date",
        "article_text_template" : "div.block-post-text",
        "tags_template2" : "div.keywords_block", #loop through a
@@ -96,22 +96,24 @@ settings = {
        "tags_template2" : "div.tags", #loop through a
        "tags_template": "",
    }
-   "www.censor.net.ua":{
-   + "articles_list_by_day_template" : "https://censor.net.ua/news/all/page/{page_number}/archive/{date}/category/0/sortby/date",
-    +   "articles_list_content_blocks_template" : "div.curpane",
-     +  "article_link_template" : "h3 a",
-      + "date_template" : "%Y-%m-%d",
+   "www.censor.net.ua":
+    {
+       "articles_list_by_day_template" : "https://censor.net.ua/news/all/page/{page_number}/archive/{date}/category/0/sortby/date",
+       "articles_list_content_blocks_template" : "div.curpane",
+       "article_link_template" : "h3 a",
+       "date_template" : "%Y-%m-%d",
       # "pages_template" : "div.col-12",
-      + "article_title_template" : "h1.entry-title",
-      + "article_publication_datetime" : "time.published.dateline",
-      + "article_text_template" : "div.text",
-       +"tags_template2" : "div.tags", 
-      + "tags_template": "div.news_by_theme",
+       "article_title_template" : "h1.entry-title",
+       "article_publication_datetime" : "time.published.dateline",
+       "article_text_template" : "div.text",
+       "tags_template2" : "div.tags", 
+       "tags_template": "div.news_by_theme",
    },
-    "www.gordonua.com"{
+    "www.gordonua.com":
+    {
         "articles_list_by_day_template" : "http://gordonua.com/html/newsitemap/%Y-%m/{date}.html",
         "articles_list_content_blocks_template" : "body",
-       ? "article_link_template" :"body.ul.remove() a", ?
+        "article_link_template" :"body>a", 
         "date_template" : "%Y-%m-%d",
         # "pages_template" : "div.col-12",
         "article_title_template" : "h1.a_head.flipboard-title",
@@ -120,20 +122,22 @@ settings = {
         #"tags_template2" : "", 
        "tags_template": "div.tags.flipboard-endArticle"
     },
-    "www.unian.ua"{
+    "www.unian.ua":
+    {
         "articles_list_by_day_template" : " https://www.unian.ua/news/archive/{date}",
         "articles_list_content_blocks_template" : "div.publications-archive",
         "article_link_template" : "a.publication-title",
         "date_template" : "%Y%m%d", 
         #"pages_template" : "div.pagination ul.pages li:last",
-        "article_title_template" : "h1",
+        "article_title_template" : "div.article-text h1",
         "article_publication_datetime" : "div.item.time.no-padding",
-        "article_text_template" : "div.article-text",
-        "tags_template2" : "div.mp-level.main-menu",
+        "article_text_template" : " h2, div.clearfix",
+        "tags_template2" : "div.mp-level.main-menu", # access to all the topics on the page, no tags
         #"tags_template": "meta[name=keywords]",
         #"news_keywords": "meta[name=news_keywords]"
     },
-    "www.comments.ua"{
+    "www.comments.ua":
+    {
         "articles_list_by_day_template" : "https://comments.ua/archive/{date}/",
         "articles_list_content_blocks_template" : "div.archive_feed_box",
         "article_link_template" : "a.link_search_result_title",
@@ -141,24 +145,26 @@ settings = {
         #"pages_template" : "div.pagination ul.pages li:last",
         "article_title_template" : "h1.text_news_header_text",
         "article_publication_datetime" : "p.text_news_header_date",
-        "article_text_template" : "div.news_content_box",
-       "tags_template2" : "p.text_news_source",
+        "article_text_template" : "div#hypercontext",
+        "tags_template2" : "p.text_news_source",
        # "tags_template": "meta[name=keywords]",
        # "news_keywords": "meta[name=news_keywords]"
     },
-    "www.112.ua"{
+    "www.112.ua":
+    {
         "articles_list_by_day_template" :  "https://112.ua/archive?date_from={date}-10&date_to={date}",
         "articles_list_content_blocks_template" : "ul.news-list",
         "article_link_template" : "li p a",
         "date_template" : "%Y-%m-%d",
-        "pages_template" : "ul.pagination",
-        "article_title_template" : "h1.itemprop",
+        "pages_template" : "ul.pagination [class!="next"] li:last", 
+        "article_title_template" : "div.b-center-item-head-info h1",
         "article_publication_datetime" : "div.meta-info div.time",
-        "article_text_template" : "div.article-text",
+        "article_text_template" : "h3.article-lead, div.article-text",
         "tags_template2" : "div.article-tags",
         #"tags_template": "meta[name=keywords]",
         #"news_keywords": "meta[name=news_keywords]" 
     },
+ 
     "www.gazeta.ua"{
         "articles_list_by_day_template" : "https://gazeta.ua/news/{date}/", # concatenating #100 to the url does not change news displayed and sometimes leads to no news displayed at all or even 404
         "articles_list_content_blocks_template" : "div.news-wrapper",
@@ -172,7 +178,8 @@ settings = {
        "tags_template": "article a.w-title",
        #"news_keywords": "meta[name=news_keywords]"
     },
-    "wwww.fakty.ua"{
+    "wwww.fakty.ua":
+    {
         "articles_list_by_day_template" : "http://fakty.ua/archive/index?d={date}&ArticlesItem_page={page_number}",
         "articles_list_content_blocks_template" : "div.items",
         "article_link_template" : "a.tit",
@@ -185,7 +192,8 @@ settings = {
         #"tags_template": "meta[name=keywords]",
         #"news_keywords": "meta[name=news_keywords]"
     },
-    "www.kp.ua"{
+    "www.kp.ua":
+    {
         "articles_list_by_day_template" : "https://kp.ua/archive/{date}/",
         "articles_list_content_blocks_template" : "ul.news-online.news-per-day",
         "article_link_template" : "ul.news-online.news-per-day  a",
