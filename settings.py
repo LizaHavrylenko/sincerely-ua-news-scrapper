@@ -164,18 +164,18 @@ settings = {
         #"tags_template": "meta[name=keywords]",
         #"news_keywords": "meta[name=news_keywords]" 
     },
-    "www.gazeta.ua":
-    {
-        "articles_list_by_day_template" : "https://gazeta.ua/news/{date}#100/",
+ 
+    "www.gazeta.ua"{
+        "articles_list_by_day_template" : "https://gazeta.ua/news/{date}/", # concatenating #100 to the url does not change news displayed and sometimes leads to no news displayed at all or even 404
         "articles_list_content_blocks_template" : "div.news-wrapper",
         "article_link_template" : "a.news-title.block.black.fs16.mb5",
         "date_template" : "%Y-%m-%d",
-       # "pages_template" : "div.pagination ul.pages li:last",
+        "pages_template" : "a#stream-next",                                 # button "Гортати далі", seems to load next 20 news on press.
         "article_title_template" : "article h1",
         "article_publication_datetime" : "div.pull-right.news-date",
-        "article_text_template" : "section.article-content.clearfix",
-       #"tags_template2" : "div.tag a",
-       #"tags_template": "meta[name=keywords]",
+        "article_text_template" : "section.article-content.clearfix article",
+       "tags_template2" : "article a.w-tag-title,a.w-title",
+       "tags_template": "article a.w-title",
        #"news_keywords": "meta[name=news_keywords]"
     },
     "wwww.fakty.ua":
@@ -184,7 +184,7 @@ settings = {
         "articles_list_content_blocks_template" : "div.items",
         "article_link_template" : "a.tit",
         "date_template" : "%Y%m%d",
-        "pages_template" : "div.pager ul li:last",
+        "pages_template" : "div.pager li.last a",
         "article_title_template" : "div.zag3 h1",
         "article_publication_datetime" : "span.g-gate",
         "article_text_template" : "div#article_content3",
@@ -196,7 +196,7 @@ settings = {
     {
         "articles_list_by_day_template" : "https://kp.ua/archive/{date}/",
         "articles_list_content_blocks_template" : "ul.news-online.news-per-day",
-        "article_link_template" : "ul.news-online.news-per-day li a",
+        "article_link_template" : "ul.news-online.news-per-day  a",
         "date_template" : "%Y/%B/%d",
        #"pages_template" : "div.pagination ul.pages li:last",
         "article_title_template" : "div.content-img__main h1",
@@ -206,6 +206,19 @@ settings = {
         #"tags_template": "meta[name=keywords]",
         #"news_keywords": "meta[name=news_keywords]"
     },
+     "www.unn.com.ua":
+   {
+       "articles_list_by_day_template" : "http://www.unn.com.ua/uk/news/{date}/page-{page_number}",
+       "articles_list_content_blocks_template" : "div#news_public_holder.h-news-feed", 
+       "article_link_template" : "div#news_public_holder.h-news-feed a",
+       "date_template" : "%Y/%m/%d",
+       "pages_template" : "div.b-page-selector [class!='page_nav next_page']:last",
+       "article_title_template" : "h1.title",
+       "article_publication_datetime" : "[itemprop='datePublished']",
+       "article_text_template" : "div.b-news-text.b-static-text",
+       "tags_template2" : "div.b-news-tags a", #loop through a
+       #"tags_template": ".hashtags a",
+   },
     "zn.ua":
    {
        "articles_list_by_day_template" : "https://zn.ua/all-news/?page={page_number}&date={date}",
